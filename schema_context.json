@@ -1,0 +1,184 @@
+{
+  "_default": {
+    "_default": {
+      "schemas": [
+        {
+          "type": "patient",
+          "properties": {
+            "id": {
+              "type": "string",
+              "samples": [
+                "142070181",
+                "233773662",
+                "330193295",
+                "486264062",
+                "736159273"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "samples": [
+                "Carol Anderson",
+                "David Lee",
+                "Nancy Adams",
+                "Paul Gomez",
+                "Ronald Anderson"
+              ]
+            },
+            "birth_date_year": {
+              "type": "number",
+              "samples": [
+                1948,
+                1949,
+                1961,
+                1993,
+                2006
+              ]
+            },
+            "gender": {
+              "type": "string",
+              "samples": [
+                "female",
+                "male"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "samples": [
+                "patient"
+              ]
+            }
+          },
+          "document_count": 100
+        },
+        {
+          "type": "test",
+          "properties": {
+            "id": {
+              "type": "string",
+              "samples": [
+                "t3778fd8f",
+                "t44a951b3",
+                "t57929627",
+                "t6e11d8dd",
+                "t8d95b515"
+              ]
+            },
+            "patient_id": {
+              "type": "string",
+              "samples": [
+                "309719594",
+                "341847430",
+                "400247913",
+                "727869625",
+                "808576034"
+              ]
+            },
+            "result_date": {
+              "type": "string",
+              "samples": [
+                "2023-10-08",
+                "2023-10-23",
+                "2024-04-15",
+                "2024-10-23",
+                "2024-11-29"
+              ]
+            },
+            "results": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "result_id": {
+                    "type": "string",
+                    "samples": [
+                      "findings",
+                      "status"
+                    ]
+                  },
+                  "result_value": {
+                    "type": "string",
+                    "samples": [
+                      "abnormal",
+                      "fracture detected",
+                      "no abnormalities",
+                      "normal",
+                      "pending"
+                    ]
+                  }
+                }
+              },
+              "minItems": 1,
+              "maxItems": 3,
+              "samples": [
+                [
+                  {
+                    "result_id": "hemoglobin",
+                    "result_value": "13.3"
+                  },
+                  {
+                    "result_id": "white_blood_cells",
+                    "result_value": "8227"
+                  },
+                  {
+                    "result_id": "platelets",
+                    "result_value": "168097"
+                  }
+                ],
+                [
+                  {
+                    "result_id": "hemoglobin",
+                    "result_value": "13.6"
+                  },
+                  {
+                    "result_id": "white_blood_cells",
+                    "result_value": "6197"
+                  },
+                  {
+                    "result_id": "platelets",
+                    "result_value": "276768"
+                  }
+                ],
+                [
+                  {
+                    "result_id": "status",
+                    "result_value": "abnormal"
+                  }
+                ],
+                [
+                  {
+                    "result_id": "status",
+                    "result_value": "normal"
+                  }
+                ],
+                [
+                  {
+                    "result_id": "status",
+                    "result_value": "pending"
+                  }
+                ]
+              ]
+            },
+            "test_type": {
+              "type": "string",
+              "samples": [
+                "blood_test",
+                "ct_scan",
+                "kidney_function",
+                "liver_function",
+                "ultrasound"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "samples": [
+                "test"
+              ]
+            }
+          },
+          "document_count": 287
+        }
+      ]
+    }
+  }
+}
